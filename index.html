@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21130d">
+<meta name="description" content="كرزات ما شاء الله - قائمة أسعار المكسرات والحلويات والمنتجات المتنوعة.">
+<title>كرزات ما شاء الله | قائمة الأسعار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-brand">كرزات ما شاء الله</div>
+    <div class="loader-percent" id="load-pc">0%</div>
+    <div class="loader-track"><div id="load-bar"></div></div>
+    <p>نجهّز لك قائمة اليوم...</p>
+  </div>
+</div>
+
+<div id="scrollBar"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#" aria-label="كرزات ما شاء الله">
+      <span><strong>كرزات ما شاء الله</strong><small>نكهة تستاهلها</small></span>
+    </a>
+    <div class="search-box">
+      <span class="search-icon">⌕</span>
+      <input id="search" type="search" autocomplete="off" placeholder="ابحث عن منتج..." aria-label="البحث عن منتج">
+      <button id="clear-search" type="button" aria-label="مسح البحث">×</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">قائمة الأسعار اليومية</span>
+    <h1>المكسرات والحلويات<br><em>بطعم يفتح النفس.</em></h1>
+    <p>تشكيلة مختارة بعناية، وأسعار محدثة مباشرة من قاعدة بيانات المحل.</p>
+    <a class="hero-action" href="#products">استعرض المنتجات <span>↓</span></a>
+  </div>
+  <div class="hero-glow hero-glow-one"></div>
+  <div class="hero-glow hero-glow-two"></div>
+  <div class="hero-noise"></div>
+</section>
+
+<section class="catalog-section" id="products-section">
+  <div class="section-head">
+    <div><span class="section-kicker">تشكيلتنا</span><h2>اختار اللي يعجبك</h2></div>
+    <span class="product-count" id="product-count">...</span>
+  </div>
+
+  <div class="category-tabs" role="tablist" aria-label="أقسام المنتجات">
+    <button class="tab active" data-cat="all" type="button">الكل</button>
+    <button class="tab" data-cat="المكسرات" type="button">المكسرات</button>
+    <button class="tab" data-cat="الحلويات" type="button">الحلويات</button>
+    <button class="tab" data-cat="منتجات أخرى" type="button">منتجات أخرى</button>
+  </div>
+
+  <div class="catalog-tools">
+    <span id="active-filter">كل المنتجات</span>
+    <button id="reset-filters" type="button">إعادة ضبط</button>
+  </div>
+
+  <div id="loading-products" class="products-state">
+    <div class="state-spinner"></div><p>جاري تحميل المنتجات...</p>
+  </div>
+  <section class="products" id="products" aria-live="polite"></section>
+
+  <div id="no-results" class="products-state empty-state" hidden>
+    <div class="empty-icon">⌕</div><h3>ما لقينا هذا المنتج</h3><p>جرّب اسم مختلف أو ارجع لكل المنتجات.</p>
+  </div>
+
+  <div id="api-error" class="products-state empty-state" hidden>
+    <div class="empty-icon">!</div><h3>تعذر تحميل القائمة</h3>
+    <p>تأكد من اتصال الموقع بالسيرفر ثم أعد المحاولة.</p>
+    <button id="retry-btn" class="retry-btn" type="button">إعادة المحاولة</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">كرزات ما شاء الله</div><p>أجود المكسرات والحلويات، بقائمة أسعار تتحدث من المصدر.</p></div>
+    <div class="footer-contact"><span>للاستفسار</span><button type="button" onclick="openWhatsApp()">واتساب</button><button type="button" onclick="openCall()">اتصال</button></div>
+  </div>
+  <div class="footer-bottom">© 2026 كرزات ما شاء الله — جميع الحقوق محفوظة</div>
+</footer>
+
+<button id="backToTop" type="button" aria-label="العودة للأعلى">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
